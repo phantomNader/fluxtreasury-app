@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+
 
 export const metadata: Metadata = {
   title: "FluxTreasury",
@@ -20,12 +22,15 @@ export default function RootLayout({
           <header className="border-b border-slate-800/70 bg-slate-950/80 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
               {/* Logo / Brand */}
-              <Link href="/" className="flex items-baseline gap-2">
-                <span className="text-lg font-semibold tracking-wide">
-                  FLUX
-                </span>
-                <span className="text-lg italic text-teal-400">Treasury</span>
-              </Link>
+             <Link href="/" className="flex items-center gap-2">
+ 		 <Image
+   		 src="/logo.png"    
+   		 alt="FluxTreasury Logo"
+  		 width={160}
+   		 height={40}
+   		 className="h-8 w-auto"
+ 		 />
+		</Link>
 
               {/* Nav Links */}
               <nav className="flex items-center gap-6 text-sm text-slate-300">
